@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мережеві черв'яки (Dark Red)</title>
+    
+    <link rel="stylesheet" href="style_light_red.css">
+    <link rel="stylesheet" href="pupupu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .content-column {
+            flex: 3; 
+        }
+
+        .sidebar-column {
+            flex: 1; 
+        }
+
+        .navigation-panel {
+            background-color: #0a0000;
+            border: 1px solid #ff0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 15px #330000;
+            box-sizing: border-box; 
+        }
+        
+        .navigation-panel a {
+            color: #ff4d4d;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px dotted #4d0000;
+            transition: 0.4s ease; 
+        }
+        
+        .navigation-panel a:hover {
+            color: #ffffff;
+            background: #220000;
+            padding-left: 15px;
+        }
+
+        .scroll-text-box {
+            width: 100%;
+            height: 120px;
+            overflow-y: scroll; 
+            border: 1px double #ff0000;
+            padding: 15px;
+            background: rgba(20, 0, 0, 0.8);
+            margin: 15px 0;
+            box-sizing: border-box;
+        }
+
+        .float-worm-img {
+            float: right;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ff0000;
+            transition: 0.5s;
+        }
+
+        .float-worm-img:hover {
+            transform: scale(1.1) rotate(5deg); 
+        }
+
+        .warning-box {
+            background: rgba(255, 0, 0, 0.1);
+            border-left: 4px solid #ff0000;
+            padding: 15px;
+            margin: 15px 0;
+            box-sizing: border-box;
+        }
+
+        .data-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #1a0000; 
+        }
+
+        .data-table tr:hover {
+            background-color: #330000; 
+        }
+
+        .data-table th {
+            background: #4d0000;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ff0000;
+        }
+
+        .data-table td {
+            padding: 10px;
+            border: 1px solid #220000;
+            color: #ccc;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 5px #ff0000; }
+            50% { transform: scale(1.02); box-shadow: 0 0 20px #ff0000; }
+            100% { transform: scale(1); box-shadow: 0 0 5px #ff0000; }
+        }
+
+        .animated-header {
+            animation: pulse 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body background="images/vector-dynamic-line-dark-technology-background_93566-14.avif">
+
+<header class="animated-header">
+    <div class="header-flex">
+        <div style="width: 20%; text-align: center;">
+            <img src="images/1697210550.jpg" alt="Ліва іконка" width="250">
+        </div>
+        <div style="width: 60%; text-align: center;">
+            <h1 style="text-transform: uppercase;">Мережеві черв'яки</h1>
+        </div>
+        <div style="width: 20%; text-align: center;">
+            <img src="images/virus.png" alt="Права іконка" width="250">
+        </div>
+    </div>
+</header>
+
+<nav style="text-align: center; padding: 10px;">
+    <a href="index.html">Головна</a> |
+    <a href="file-viruses.html">Файлові віруси</a> |
+    <a href="boot-viruses.html">Завантажувальні віруси</a> |
+    <a href="macro-viruses.html">Макровіруси</a> |
+    <a href="network-worms.html">Мережеві черв'яки</a> |
+    <a href="https://maydgd.carrd.co" target="_blank">Про автора</a>
+</nav>
+
+<main class="main-layout">
+    <div class="content-column">
+        <article>
+            <a name="begin"></a>
+            <h2>Зміст розділу</h2>
+            <div class="navigation-panel">
+                <a href="#part1">1. Що таке мережеві черв'яки?</a>
+                <a href="#part2">2. Механізм саморозмноження</a>
+                <a href="#part3">3. Відмінність від звичайних вірусів</a>
+                <a href="#part4">4. Методи мережевого захисту</a>
+                <a href="https://maydgd.carrd.co" target="_blank">Про автора</a>
+            </div>
+
+            <a name="part1"></a>
+            <h2>Що таке мережеві черв'яки?</h2>
+            <p>
+                Мережеві черв'яки — це самостійні програми, які копіюють себе з одного комп'ютера 
+                на інший за допомогою мереж. 
+            </p>
+
+            <a name="part2"></a>
+            <h2>Механізм саморозмноження (Overflow Demo)</h2>
+            <div class="scroll-text-box">
+                <img src="images/worm-self-spreading.png" alt="Схема" width="100" class="float-worm-img">
+                Програма сканує мережу в пошуках комп'ютерів із відомою помилкою захисту. Після знаходження вразливого вузла черв'як надсилає свій код, який автоматично виконується на цільовій машині. Далі процес повторюється експоненціально. Саме так черв'яки, як-от Morris Worm або Conficker, змогли заразити мільйони пристроїв за надзвичайно короткий проміжок часу.
+            </div>
+
+            <a name="part3"></a>
+            <h2>Відмінність від вірусів</h2>
+            <div class="warning-box">
+                Головна мета черв'яка — захопити якомога більше вузлів мережі. На відміну від вірусів, вони не потребують втручання людини (наприклад, відкриття файлу).
+            </div>
+
+            <a name="part4"></a>
+            <h2>Методи мережевого захисту</h2>
+            <ul>
+                <li><b style="color: #ff3333;">Firewalls:</b> фільтрація вхідного трафіку.</li>
+                <li><b>Оновлення ПЗ:</b> закриття вразливостей.</li>
+                <li><b>Антивірусні екрани:</b> моніторинг активності.</li>
+            </ul>
+
+            <h2>Порівняльна таблиця впливу</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Об'єкт впливу</th>
+                        <th>Наслідки зараження</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Мережевий трафік</b></td>
+                        <td>Різке падіння швидкості інтернету.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Системна пам'ять</b></td>
+                        <td>Переповнення ОЗП процесами шкідника.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Безпека даних</b></td>
+                        <td>Створення "бекдорів" для хакерів.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+
+    <div class="sidebar-column">
+        <aside>
+            <h3>Загрози</h3>
+            <div class="navigation-panel">
+                <a href="file-viruses.html">Файлові віруси</a>
+                <a href="boot-viruses.html">Завантажувальні</a>
+                <a href="macro-viruses.html">Макровіруси</a>
+            </div>
+
+            <hr style="border-color: #4d0000;">
+            
+            <h3>Цікавий факт</h3>
+            <p style="font-size: 0.85em; line-height: 1.4;">
+                Черв'як <b>"ILOVEYOU"</b> вразив понад 50 мільйонів ПК лише за 10 днів.
+            </p>
+            
+            <h3>Ілюстрація</h3>
+            <div style="text-align: center;">
+                <img src="images/virus-860x573.webp" alt="Іконка" width="100%" style="opacity: 0.7; border-radius: 10px; border: 1px solid #ff0000;">
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <p style="text-align: center; color: #ff0000; background: #000000; padding: 25px; border-top: 2px solid #ff0000; font-family: 'Courier New', Courier, monospace; margin: 0;">
+        Автор: Свитка Богдана | Група: 1ЕХКБ-25б | 2026
+    </p>
+</footer>
+
+<audio id="myAudio" loop>
+  <source src="music\Танец_Ночного_Лиса_Танец_Ночного_Лиса_OST_OceanS_12_muzmo_site.mp3">
+</audio>
+
+<script>
+  // Функція запуску при першому кліку
+  document.body.addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    if (audio.paused) {
+        audio.play();
+        console.log("Музика грає!");
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>

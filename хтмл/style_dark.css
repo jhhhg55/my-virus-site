@@ -1,0 +1,54 @@
+/* style_dark.css */
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Courier New', monospace; /* Моноширинний шрифт для ІТ-стилю */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161b22;
+    border-bottom: 3px solid #238636;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #2ea043;
+    text-shadow: 0 0 10px #238636;
+}
+
+nav {
+    background: #21262d;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #58a6ff;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #58a6ff;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #0d1117;
+}
+
+th {
+    background-color: #238636;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #30363d;
+    padding: 15px;
+}
