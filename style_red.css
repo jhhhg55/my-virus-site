@@ -1,0 +1,59 @@
+body {
+    background-color: #1a0000; 
+    color: #ffcccc; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(180deg, #4d0000 0%, #1a0000 100%);
+    border-bottom: 2px solid #ff0000;
+    padding: 15px;
+}
+
+h1, h2, h3 {
+    color: #ff3333; 
+    text-shadow: 2px 2px 4px #000;
+}
+
+nav {
+    background: #330000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: rgba(40, 0, 0, 0.6);
+    border: 1px solid #ff0000;
+}
+
+th {
+    background-color: #800000;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #4d0000;
+    padding: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ff0000;
+}
